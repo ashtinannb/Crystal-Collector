@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystal Collector</title>
+
+    <!--Link to Reset Styles-->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+    <!--Link to jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!--Link to Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!--CSS Style Sheet-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+
+</head>
+
+<body>
+
+    <div class="jumbotron">
+        <h1 class="display-2">Crystal Collector</h1>
+    </div>
+
+    <!--Instructions How to Play-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">How to Play!</h3>
+                    </div>
+                    <div class="panel-body">
+
+                        <p>You will be given a random number at the start of the game.</p>
+                        <p>There are four crystals below. By clicking on a crystal you will add a specific amount of
+                            points to your total score.</p>
+                        <p> You win the game by matching your total score to random number, you lose the game if your
+                            total score goes above the random number.</p>
+                        <p>The value of each crystal is hidden from you until you click on it.</p>
+                        <p> Each time when the game starts, the game will change the values of each crystal.</p>
+                    </div>
+                </div>
+            </div>
+            <!--Target Number Box-->
+            <div class="col-md-1 target-number">
+                <p>Target Number: <span class="targetNumber"></span></p>
+            </div>
+            <!--extra space-->
+            <div class="col-md-1">
+            </div>
+            <!--Win Loss Counter-->
+            <div class="col-md-2 win-lose-counter">
+                <p>Wins:<span class="wins"></span></p>
+                <p>Losses:<span class="losses"></span></p>
+            </div>
+            <!--extra space-->
+            <div class="col-md-1">
+            </div>
+            <!--Total Score Box-->
+            <div class="col-md-2 total-score">
+                <p>Score:<span class="score">0</span></p>
+            </div>
+        </div>
+
+        <!--Images-->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <img class="blue" src="assets/images/cry1.jpg" />
+                    <img class="purple" src="assets/images/cry2.jpeg" />
+                    <img class="opal" src="assets/images/cry3.jpg" />
+                    <img class="pink" src="assets/images/cry4.png" />
+                </div>
+            </div>
+
+
+            <!--Link to Javascript page-->
+            <script type="text/javascript" src="assets/javascript/game.js"></script>
+
+</body>
+
+</html>
