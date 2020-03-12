@@ -4,17 +4,25 @@ var targetNumber = Math.floor(Math.random() * (120 - 19) + 19);
 var score = 0;
 var wins = 0;
 var losses = 0;
+var bluebtn = document.querySelector(".blue");
+var purpbtn = document.querySelector(".purple");
+var opalbtn = document.querySelector(".opal");
+var pinkbtn = document.querySelector(".pink");
 document.querySelector(".targetNumber").innerHTML = targetNumber
 
 
-//function to reset game
-function reset () {
+function reset() {
     targetNumber = Math.floor(Math.random() * (120 - 19) + 19);
-
+    document.querySelector(".targetNumber").innerHTML = targetNumber
+    score = 0;
+    document.querySelector(".score").innerHTML = targetNumber
+    bluebtn.dataset.value = Math.floor(Math.random() * (12 - 1) + 1);
+    purpbtn.dataset.value = Math.floor(Math.random() * (12 - 1) + 1);
+    opalbtn.dataset.value = Math.floor(Math.random() * (12 - 1) + 1);
+    pinkbtn.dataset.value = Math.floor(Math.random() * (12 - 1) + 1);
 }
 
 //Blue Crystal
-var bluebtn = document.querySelector(".blue");
 bluebtn.dataset.value = Math.floor(Math.random() * (12 - 1) + 1);
 
 bluebtn.addEventListener("click", function (event) {
@@ -27,6 +35,7 @@ bluebtn.addEventListener("click", function (event) {
         losses += 1;
         document.querySelector(".losses").innerHTML = losses
         alert("You lost!")
+        reset()
     } else if (targetNumber === score) {
         wins += 1;
         document.querySelector(".wins").innerHTML = wins
@@ -36,7 +45,6 @@ bluebtn.addEventListener("click", function (event) {
 })
 
 //Purple Crystal
-var purpbtn = document.querySelector(".purple");
 purpbtn.dataset.value = Math.floor(Math.random() * (12 - 1) + 1);
 
 purpbtn.addEventListener("click", function (event) {
@@ -49,6 +57,7 @@ purpbtn.addEventListener("click", function (event) {
         losses += 1;
         document.querySelector(".losses").innerHTML = losses
         alert("You lost!")
+        reset()
     } else if (targetNumber === score) {
         wins += 1;
         document.querySelector(".wins").innerHTML = wins
@@ -58,7 +67,6 @@ purpbtn.addEventListener("click", function (event) {
 })
 
 //Clear Crystal
-var opalbtn = document.querySelector(".opal");
 opalbtn.dataset.value = Math.floor(Math.random() * (12 - 1) + 1);
 
 opalbtn.addEventListener("click", function (event) {
@@ -71,6 +79,7 @@ opalbtn.addEventListener("click", function (event) {
         losses += 1;
         document.querySelector(".losses").innerHTML = losses
         alert("You lost!")
+        reset()
     } else if (targetNumber === score) {
         wins += 1;
         document.querySelector(".wins").innerHTML = wins
@@ -80,7 +89,7 @@ opalbtn.addEventListener("click", function (event) {
 })
 
 //Pink Crystal
-var pinkbtn = document.querySelector(".pink");
+
 pinkbtn.dataset.value = Math.floor(Math.random() * (12 - 1) + 1);
 
 pinkbtn.addEventListener("click", function (event) {
@@ -93,6 +102,7 @@ pinkbtn.addEventListener("click", function (event) {
         losses += 1;
         document.querySelector(".losses").innerHTML = losses
         alert("You lost!")
+        reset()
     } else if (targetNumber === score) {
         wins += 1;
         document.querySelector(".wins").innerHTML = wins
